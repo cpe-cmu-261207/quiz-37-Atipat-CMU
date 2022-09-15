@@ -29,9 +29,10 @@ export default function Comment(props) {
         </div>
       </div>
       {/*render Reply here... */}
-      {props.replies.map((x) => {
+      {props.replies.map((x, i) => {
         return (
           <Reply
+            key={i}
             username={x.username}
             userImagePath={x.userImagePath}
             replyText={x.replyText}

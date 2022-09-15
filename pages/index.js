@@ -19,9 +19,10 @@ export default function Home() {
           like="35671"
           userImagePath="/profileImages/atipat_01.jpg"
         />
-        {comments.map((x) => {
+        {comments.map((x, i) => {
           return (
             <Comment
+              key={i}
               username={x.username}
               userImagePath={x.userImagePath}
               commentText={x.commentText}
